@@ -51,10 +51,4 @@
     <tools.1.label>Corpo</tools.1.label>
   </AdvancedTool_Drill>
 
-  <power_tool_orange.label>laranja</power_tool_orange.label>
-  <power_tool_yellow.label>amarelo</power_tool_yellow.label>
-  <power_tool_red.label>vermelho</power_tool_red.label>
-  <power_tool_blue.label>azul</power_tool_blue.label>
-  <power_tool_green.label>verde</power_tool_green.label>
-
 </LanguageData>

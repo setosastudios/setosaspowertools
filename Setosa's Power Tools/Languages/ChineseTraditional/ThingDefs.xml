@@ -51,10 +51,4 @@
     <tools.1.label>機身</tools.1.label>
   </AdvancedTool_Drill>
 
-  <power_tool_orange.label>橘色</power_tool_orange.label>
-  <power_tool_yellow.label>黃色</power_tool_yellow.label>
-  <power_tool_red.label>紅色</power_tool_red.label>
-  <power_tool_blue.label>藍色</power_tool_blue.label>
-  <power_tool_green.label>綠色</power_tool_green.label>
-
 </LanguageData>

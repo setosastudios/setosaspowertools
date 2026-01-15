@@ -51,10 +51,4 @@
     <tools.1.label>Korpus</tools.1.label>
   </AdvancedTool_Drill>
 
-  <power_tool_orange.label>Pomarańczowy</power_tool_orange.label>
-  <power_tool_yellow.label>Żółty</power_tool_yellow.label>
-  <power_tool_red.label>Czerwony</power_tool_red.label>
-  <power_tool_blue.label>Niebieski</power_tool_blue.label>
-  <power_tool_green.label>Zielony</power_tool_green.label>
-
 </LanguageData>

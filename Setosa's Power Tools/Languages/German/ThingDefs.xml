@@ -51,10 +51,4 @@
     <tools.1.label>Gehäuse</tools.1.label>
   </AdvancedTool_Drill>
 
-  <power_tool_orange.label>Orange</power_tool_orange.label>
-  <power_tool_yellow.label>Gelb</power_tool_yellow.label>
-  <power_tool_red.label>Rot</power_tool_red.label>
-  <power_tool_blue.label>Blau</power_tool_blue.label>
-  <power_tool_green.label>Grün</power_tool_green.label>
-
 </LanguageData>

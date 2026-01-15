@@ -51,10 +51,4 @@
     <tools.1.label>Корпус</tools.1.label>
   </AdvancedTool_Drill>
 
-  <power_tool_orange.label>Оранжевый</power_tool_orange.label>
-  <power_tool_yellow.label>Жёлтый</power_tool_yellow.label>
-  <power_tool_red.label>Красный</power_tool_red.label>
-  <power_tool_blue.label>Синий</power_tool_blue.label>
-  <power_tool_green.label>Зелёный</power_tool_green.label>
-
 </LanguageData>

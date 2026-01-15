@@ -1,21 +1,20 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+using System;
 using HarmonyLib;
 using Verse;
 
 namespace Setosa.PowerTools;
 
-[HarmonyPatch(typeof(BackCompatibility), nameof(BackCompatibility.BackCompatibleDefName))]
-[SuppressMessage("ReSharper", "InconsistentNaming")]
-public class Migration {
-	private const string OldThingPrefix = "advancedTool_";
+[HarmonyPatch(typeof(BackCompatibility))]
+internal class Migration {
+	internal const string OLD_THING_PREFIX = "advancedTool_";
 
-	private const string NewThingPrefix = "AdvancedTool_";
+	internal const string NEW_THING_PREFIX = "AdvancedTool_";
 
+	[HarmonyPatch(nameof(BackCompatibility.BackCompatibleDefName))]
 	[HarmonyPostfix]
-	public static void Postfix(Type defType, string defName, ref string? __result) {
-		if (defType == typeof(ThingDef) && defName.StartsWith(OldThingPrefix)) {
-			__result = NewThingPrefix + defName[OldThingPrefix.Length..];
+	internal static void BackCompatibleDefName_Postfix(Type defType, string defName, ref string? __result) {
+		if (defType == typeof(ThingDef) && defName.StartsWith(OLD_THING_PREFIX)) {
+			__result = NEW_THING_PREFIX + defName[OLD_THING_PREFIX.Length..];
 			Logger.Message($"Migrated {defName} to {__result}");
 		}
 	}

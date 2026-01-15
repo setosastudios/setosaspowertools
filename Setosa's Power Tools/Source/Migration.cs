@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using HarmonyLib;
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 [HarmonyPatch(typeof(BackCompatibility), nameof(BackCompatibility.BackCompatibleDefName))]
 [SuppressMessage("ReSharper", "InconsistentNaming")]

@@ -1,6 +1,6 @@
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 public class Settings : ModSettings {
 	public static Settings Default { get; internal set; } = null!;

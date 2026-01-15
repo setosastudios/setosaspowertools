@@ -1,4 +1,4 @@
-﻿namespace Setosa;
+﻿namespace Setosa.PowerTools;
 
 public static class Presets {
 	public static readonly ThingStatOffsetCollection Normal = new() {

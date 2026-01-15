@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 public static class Logger {
 	internal static bool Enabled =

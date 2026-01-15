@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -7,7 +7,7 @@ using TrueMogician.Extensions.Collections.Dictionary;
 using TrueMogician.Extensions.Enumerable;
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 using Base = TupleDictionary3D<string, string, float>;
 using Tuple = (string ThingDef, string StatDef, float Value);

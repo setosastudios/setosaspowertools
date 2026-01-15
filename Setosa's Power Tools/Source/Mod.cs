@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 [StaticConstructorOnStartup]
 public class Mod : Verse.Mod {

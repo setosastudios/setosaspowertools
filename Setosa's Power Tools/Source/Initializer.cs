@@ -2,7 +2,7 @@ using System.Reflection;
 using HarmonyLib;
 using Verse;
 
-namespace Setosa;
+namespace Setosa.PowerTools;
 
 [StaticConstructorOnStartup]
 public static class Initializer {

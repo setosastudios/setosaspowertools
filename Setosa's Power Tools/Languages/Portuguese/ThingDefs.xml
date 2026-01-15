@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData Type="DefInjected" DefType="ThingDef">
+
+  <nailGunNail.label>Prego (pistola de pregos)</nailGunNail.label>
+
+  <AdvancedTool_NailGun>
+    <label>Pistola de pregos</label>
+    <description>Uma ferramenta de alta pressão que impulsiona fixadores metálicos com força explosiva, projetada para acelerar a construção.</description>
+    <tools.0.label>Extremidade</tools.0.label>
+  </AdvancedTool_NailGun>
+
+  <AdvancedTool_IndustrialChainsaw>
+    <label>Motosserra</label>
+    <description>Uma ferramenta de corte motorizada equipada com uma corrente dentada giratória. Originalmente projetada para abater árvores, também pode ser usada para colher plantas.</description>
+    <tools.0.label>Corrente</tools.0.label>
+    <tools.1.label>Corpo</tools.1.label>
+  </AdvancedTool_IndustrialChainsaw>
+
+  <AdvancedTool_PowerSaw>
+    <label>Serra circular</label>
+    <description>Uma ferramenta de corte compacta e de alta rotação com lâmina circular, construída para fatiar metal, pedra e outros materiais densos, incluindo estruturas.</description>
+    <tools.0.label>Lâmina</tools.0.label>
+    <tools.1.label>Cabeça</tools.1.label>
+  </AdvancedTool_PowerSaw>
+
+  <AdvancedTool_PowerAuger>
+    <label>Broca helicoidal</label>
+    <description>Uma ferramenta de perfuração muito pesada, motorizada, com lâmina helicoidal projetada para perfurar solo ou outros materiais macios. Facilita muito o plantio.</description>
+    <tools.0.label>Lâmina</tools.0.label>
+    <tools.1.label>Ponta de perfuração</tools.1.label>
+  </AdvancedTool_PowerAuger>
+
+  <AdvancedTool_Chisel>
+    <label>Formão elétrico</label>
+    <description>Uma ferramenta de entalhe compacta e motorizada com ponta de formão que oscila rapidamente, projetada para cortar madeira, pedra ou outras superfícies endurecidas. Não é tão eficaz quanto uma serra na construção, mas facilita o artesanato e o acabamento de superfícies ásperas.</description>
+    <tools.0.label>Ponta do formão</tools.0.label>
+    <tools.1.label>Aresta</tools.1.label>
+  </AdvancedTool_Chisel>
+
+  <AdvancedTool_Jackhammer>
+    <label>Marreta pneumática</label>
+    <description>Uma ferramenta percussiva pesada que impulsiona uma ponta de formão em concreto, rocha ou solo compactado com força rápida e violenta. Também é boa para destruir estruturas.</description>
+    <tools.0.label>Formão</tools.0.label>
+    <tools.1.label>Cabeça</tools.1.label>
+  </AdvancedTool_Jackhammer>
+
+  <AdvancedTool_Drill>
+    <label>Furadeira elétrica</label>
+    <description>Uma ferramenta portátil com uma broca rotativa, projetada para perfurar madeira, pedra ou metal. Facilita a montagem e desmontagem de itens.</description>
+    <tools.0.label>Ponta de broca</tools.0.label>
+    <tools.1.label>Corpo</tools.1.label>
+  </AdvancedTool_Drill>
+
+  <power_tool_orange.label>laranja</power_tool_orange.label>
+  <power_tool_yellow.label>amarelo</power_tool_yellow.label>
+  <power_tool_red.label>vermelho</power_tool_red.label>
+  <power_tool_blue.label>azul</power_tool_blue.label>
+  <power_tool_green.label>verde</power_tool_green.label>
+
+</LanguageData>

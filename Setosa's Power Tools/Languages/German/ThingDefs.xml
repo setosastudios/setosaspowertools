@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData Type="DefInjected" DefType="ThingDef">
+
+  <nailGunNail.label>Nagel (Nagelpistole)</nailGunNail.label>
+
+  <AdvancedTool_NailGun>
+    <label>Nagelpistole</label>
+    <description>Ein Hochdruckwerkzeug, das Metallbefestigungen mit explosiver Kraft antreibt, entwickelt, um Bauarbeiten zu beschleunigen.</description>
+    <tools.0.label>Endstück</tools.0.label>
+  </AdvancedTool_NailGun>
+
+  <AdvancedTool_IndustrialChainsaw>
+    <label>Kettensäge</label>
+    <description>Ein motorisiertes Schneidwerkzeug mit einer rotierenden Zahnkette. Ursprünglich zum Fällen von Bäumen gedacht, kann es auch zum Ernten von Pflanzen verwendet werden.</description>
+    <tools.0.label>Kette</tools.0.label>
+    <tools.1.label>Gehäuse</tools.1.label>
+  </AdvancedTool_IndustrialChainsaw>
+
+  <AdvancedTool_PowerSaw>
+    <label>Kreissäge</label>
+    <description>Ein kompakt gebautes, hochdrehzahliges Schneidewerkzeug mit einer Kreisscheibe, zum Durchtrennen von Metall, Stein und anderen dichten Materialien, einschließlich Gebäuden.</description>
+    <tools.0.label>Sägeblatt</tools.0.label>
+    <tools.1.label>Sägekopf</tools.1.label>
+  </AdvancedTool_PowerSaw>
+
+  <AdvancedTool_PowerAuger>
+    <label>Schneckenbohrer</label>
+    <description>Ein sehr schweres, motorisiertes Bohrgerät mit einer spiralförmigen Klinge, entworfen, um in Boden oder andere weiche Materialien zu bohren. Es erleichtert das Pflanzen.</description>
+    <tools.0.label>Schneide</tools.0.label>
+    <tools.1.label>Bohrspitze</tools.1.label>
+  </AdvancedTool_PowerAuger>
+
+  <AdvancedTool_Chisel>
+    <label>Elektromeißel</label>
+    <description>Ein kompaktes, motorisiertes Gravurwerkzeug mit einer schnell oszillierenden Meißelspitze. Nicht so effektiv wie eine Säge für Bauarbeiten, erleichtert jedoch das Bearbeiten und Glätten rauer Oberflächen.</description>
+    <tools.0.label>Meißelspitze</tools.0.label>
+    <tools.1.label>Kante</tools.1.label>
+  </AdvancedTool_Chisel>
+
+  <AdvancedTool_Jackhammer>
+    <label>Abbruchhammer</label>
+    <description>Ein schweres Schlagwerkzeug, das eine Meißelspitze mit schnellen, heftigen Schlägen in Beton, Gestein oder verdichteten Boden treibt. Ebenfalls gut zum Zerstören von Bauwerken.</description>
+    <tools.0.label>Meißel</tools.0.label>
+    <tools.1.label>Kopf</tools.1.label>
+  </AdvancedTool_Jackhammer>
+
+  <AdvancedTool_Drill>
+    <label>Bohrmaschine</label>
+    <description>Ein handgeführtes Elektrowerkzeug mit rotierender Bohrspitze, ausgelegt zum Bohren in Holz, Stein oder Metall. Erleichtert das Zusammenbauen und Zerlegen von Objekten.</description>
+    <tools.0.label>Bohrspitze</tools.0.label>
+    <tools.1.label>Gehäuse</tools.1.label>
+  </AdvancedTool_Drill>
+
+  <power_tool_orange.label>Orange</power_tool_orange.label>
+  <power_tool_yellow.label>Gelb</power_tool_yellow.label>
+  <power_tool_red.label>Rot</power_tool_red.label>
+  <power_tool_blue.label>Blau</power_tool_blue.label>
+  <power_tool_green.label>Grün</power_tool_green.label>
+
+</LanguageData>

@@ -50,7 +50,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="TrueMogician.Extensions.Collections" Version="0.7.0" />
+		<PackageReference Include="TrueMogician.Extensions.Collections" Version="0.7.1" />
 	</ItemGroup>
 
 	<UsingTask TaskName="BuildXml" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">

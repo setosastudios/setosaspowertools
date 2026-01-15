@@ -1,4 +1,6 @@
-﻿namespace Setosa.PowerTools;
+using System.Collections.Generic;
+
+namespace Setosa.PowerTools;
 
 public static class Presets {
 	public static readonly ThingStatOffsetCollection Normal = new() {
@@ -49,4 +51,6 @@ public static class Presets {
 	};
 
 	public static readonly ThingStatOffsetCollection Nerfed = Normal.Clone().Transform(v => v > 0 ? v / 2f : v);
+
+	public static IReadOnlyList<ThingStatOffsetCollection> All => [ Normal, Nerfed];
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData Type="DefInjected" DefType="ThingDef">
+
+  <nailGunNail.label>Гвоздь (для гвоздезабивателя)</nailGunNail.label>
+
+  <AdvancedTool_NailGun>
+    <label>Гвоздезабиватель</label>
+    <description>Высоконапорный инструмент, который вбивает металлические крепления взрывной силой, предназначен для ускорения строительных работ.</description>
+    <tools.0.label>Наконечник</tools.0.label>
+  </AdvancedTool_NailGun>
+
+  <AdvancedTool_IndustrialChainsaw>
+    <label>Цепная пила</label>
+    <description>Электроприводной инструмент для резки с вращающейся цепью зубьев. Первоначально предназначался для валки деревьев, также может использоваться для сбора растений.</description>
+    <tools.0.label>Цепь</tools.0.label>
+    <tools.1.label>Корпус</tools.1.label>
+  </AdvancedTool_IndustrialChainsaw>
+
+  <AdvancedTool_PowerSaw>
+    <label>Дисковая пила</label>
+    <description>Компактный, высокооборотный режущий инструмент с круговым диском, созданный для пропилки металла, камня и других плотных материалов, включая здания.</description>
+    <tools.0.label>Пильный диск</tools.0.label>
+    <tools.1.label>Корпус пилы</tools.1.label>
+  </AdvancedTool_PowerSaw>
+
+  <AdvancedTool_PowerAuger>
+    <label>Шнековый бур</label>
+    <description>Очень тяжёлый моторизованный бур с винтовым лезвием, предназначенный для сверления в почве или других мягких, мясистых материалах. Упрощает посев растений.</description>
+    <tools.0.label>Лезвие</tools.0.label>
+    <tools.1.label>Сверло</tools.1.label>
+  </AdvancedTool_PowerAuger>
+
+  <AdvancedTool_Chisel>
+    <label>Электрозубило</label>
+    <description>Компактный, моторизованный инструмент для резьбы с быстро осциллирующей зубильной насадкой, предназначенный для резки древесины, камня и других затвердевших поверхностей. Не так эффективен для строительства, как пила, но облегчает обработку и шлифовку грубых поверхностей.</description>
+    <tools.0.label>Насадка-зубило</tools.0.label>
+    <tools.1.label>Кромка</tools.1.label>
+  </AdvancedTool_Chisel>
+
+  <AdvancedTool_Jackhammer>
+    <label>Отбойный молоток</label>
+    <description>Тяжёлый ударный инструмент, который вбивает зубило в бетон, камень или уплотнённую землю быстрыми, мощными ударами. Также хорош для разрушения строений.</description>
+    <tools.0.label>Зубило</tools.0.label>
+    <tools.1.label>Головка</tools.1.label>
+  </AdvancedTool_Jackhammer>
+
+  <AdvancedTool_Drill>
+    <label>Электрическая дрель</label>
+    <description>Ручной электроинструмент с вращающимся сверлом, предназначенный для бурения отверстий в дереве, камне или металле. Облегчает сборку и разборку предметов.</description>
+    <tools.0.label>Сверло</tools.0.label>
+    <tools.1.label>Корпус</tools.1.label>
+  </AdvancedTool_Drill>
+
+</LanguageData>

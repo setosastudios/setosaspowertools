@@ -1,0 +1,9 @@
+.vs
+.vscode
+.github
+bin
+obj
+
+Dist
+SaveData
+RimWorld

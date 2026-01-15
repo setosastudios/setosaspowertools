@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData Type="DefInjected" DefType="ThingDef">
+
+  <nailGunNail.label>Clavo (para clavadora)</nailGunNail.label>
+
+  <AdvancedTool_NailGun>
+    <label>Clavadora</label>
+    <description>Una herramienta de alta presión que impulsa sujetadores metálicos con fuerza explosiva, diseñada para acelerar la construcción.</description>
+    <tools.0.label>Extremo</tools.0.label>
+  </AdvancedTool_NailGun>
+
+  <AdvancedTool_IndustrialChainsaw>
+    <label>Motosierra</label>
+    <description>Una herramienta de corte motorizada equipada con una cadena dentada giratoria. Originalmente diseñada para talar árboles, también puede usarse para cosechar plantas.</description>
+    <tools.0.label>Cadena</tools.0.label>
+    <tools.1.label>Cuerpo</tools.1.label>
+  </AdvancedTool_IndustrialChainsaw>
+
+  <AdvancedTool_PowerSaw>
+    <label>Sierra circular</label>
+    <description>Una herramienta de corte compacta y de altas RPM con una hoja circular, construida para cortar metal, piedra y otros materiales densos, incluyendo edificios.</description>
+    <tools.0.label>Hoja</tools.0.label>
+    <tools.1.label>Cabezal</tools.1.label>
+  </AdvancedTool_PowerSaw>
+
+  <AdvancedTool_PowerAuger>
+    <label>Taladro helicoidal</label>
+    <description>Una herramienta de perforación muy pesada y motorizada con una cuchilla en hélice diseñada para perforar suelo u otros materiales blandos. Facilita mucho la siembra de plantas.</description>
+    <tools.0.label>Cuchilla</tools.0.label>
+    <tools.1.label>Punta de perforación</tools.1.label>
+  </AdvancedTool_PowerAuger>
+
+  <AdvancedTool_Chisel>
+    <label>Cincel eléctrico</label>
+    <description>Una herramienta de tallado compacta y motorizada con una punta de cincel que oscila rápidamente, diseñada para cortar madera, piedra u otras superficies endurecidas. No tan eficaz como una sierra para construcción, pero facilita el trabajo artesanal y el alisado de superficies rugosas.</description>
+    <tools.0.label>Punta de cincel</tools.0.label>
+    <tools.1.label>Borde</tools.1.label>
+  </AdvancedTool_Chisel>
+
+  <AdvancedTool_Jackhammer>
+    <label>Martillo neumático</label>
+    <description>Una herramienta percutora de alta potencia que impulsa una punta de cincel en hormigón, roca o tierra compactada con golpes rápidos y violentos. También es buena para destruir estructuras.</description>
+    <tools.0.label>Cincel</tools.0.label>
+    <tools.1.label>Cabeza</tools.1.label>
+  </AdvancedTool_Jackhammer>
+
+  <AdvancedTool_Drill>
+    <label>Taladro eléctrico</label>
+    <description>Una herramienta portátil con una broca giratoria, diseñada para perforar madera, piedra o metal. Facilita el montaje y desmontaje de objetos.</description>
+    <tools.0.label>Broca</tools.0.label>
+    <tools.1.label>Cuerpo</tools.1.label>
+  </AdvancedTool_Drill>
+
+</LanguageData>

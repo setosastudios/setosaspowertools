@@ -23,6 +23,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<CustomTaskDir>$(SolutionDir)DevOps\Task\</CustomTaskDir>
 		<DistDir>$(MSBuildProjectDirectory)\Dist\</DistDir>
 		<GameDir>G:\Game Files\Steam\steamapps\common\RimWorld\</GameDir>
 	</PropertyGroup>
@@ -57,13 +58,23 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 		<PackageReference Include="TrueMogician.Extensions.Collections" Version="0.7.1" />
 	</ItemGroup>
 
+	<UsingTask TaskName="ProcessTranslations" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup />
+		<Task>
+			<Reference Include="Microsoft.Build" />
+			<Reference Include="Microsoft.Build.Framework" />
+			<Reference Include="Microsoft.Build.Utilities.Core" />
+			<Code Type="Class" Language="cs" Source="$(CustomTaskDir)ProcessTranslations.cs" />
+		</Task>
+	</UsingTask>
+
 	<UsingTask TaskName="BuildXml" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
 		<ParameterGroup />
 		<Task>
 			<Reference Include="Microsoft.Build" />
 			<Reference Include="Microsoft.Build.Framework" />
 			<Reference Include="Microsoft.Build.Utilities.Core" />
-			<Code Type="Class" Language="cs" Source="$(SolutionDir)DevOps\Task\BuildXml.cs" />
+			<Code Type="Class" Language="cs" Source="$(CustomTaskDir)BuildXml.cs" />
 		</Task>
 	</UsingTask>
 
@@ -73,34 +84,37 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 			<Reference Include="Microsoft.Build" />
 			<Reference Include="Microsoft.Build.Framework" />
 			<Reference Include="Microsoft.Build.Utilities.Core" />
-			<Code Type="Class" Language="cs" Source="$(SolutionDir)DevOps\Task\CreateLink.cs" />
+			<Code Type="Class" Language="cs" Source="$(CustomTaskDir)CreateLink.cs" />
 		</Task>
 	</UsingTask>
 
 	<Target Name="Distribute" AfterTargets="Merge">
-		<!-- 1. Copy Assets -->
 		<ItemGroup>
 			<ModAssets Include="$(ProjectDir)Public\**\*.*" />
-		</ItemGroup>
-		<Copy
-			SourceFiles="@(ModAssets)"
-			DestinationFolder="$(DistDir)%(RecursiveDir)"
-			SkipUnchangedFiles="true"
-		/>
-		<!-- 2. Generate About.xml -->
-		<ItemGroup>
 			<AboutToken Include="Name" Value="$(Title)" />
 			<AboutToken Include="Author" Value="$(Authors)" />
 			<AboutToken Include="PackageId" Value="$(PackageId)" />
 			<AboutToken Include="Version" Value="$(Version)" />
 			<AboutToken Include="Description" Value="$(Description)" />
 		</ItemGroup>
+		<!-- 1. Copy Assets -->
+		<Copy
+			SourceFiles="@(ModAssets)"
+			DestinationFolder="$(DistDir)%(RecursiveDir)"
+			SkipUnchangedFiles="true"
+		/>
+		<!-- 2. Generate About.xml -->
 		<BuildXml
 			Template="$(ProjectDir)Template\About.xml"
 			Destination="$(DistDir)About\About.xml"
 			Tokens="@(AboutToken)"
 		/>
-		<!-- 3. Copy Assembly -->
+		<!-- 3. Process Language Files -->
+		<ProcessTranslations
+			SourceFolder="$(ProjectDir)Languages"
+			DestinationFolder="$(DistDir)Shared\Languages"
+		/>
+		<!-- 4. Copy Assembly -->
 		<Copy
 			SourceFiles="$(TargetDir)Bundle.dll"
 			DestinationFiles="$(DistDir)1.6\Assemblies\$(AssemblyName).dll"

@@ -33,7 +33,7 @@ public class Mod : Verse.Mod {
 		list.Begin(inRect);
 
 		var rect = list.GetRect(_ROW_HEIGHT);
-		Widgets.Label(rect.LeftHalf(), "Preset:");
+		Widgets.Label(rect.LeftHalf(), "Setosa.PowerTools.Settings.PresetLabel".Translate());
 		if (Widgets.ButtonText(rect.RightHalf(), Settings.Default.Preset.ToString())) {
 			var options = Enum.GetValues(typeof(StatsPreset))
 				.OfType<StatsPreset>()

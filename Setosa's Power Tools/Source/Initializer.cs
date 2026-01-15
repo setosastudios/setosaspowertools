@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using HarmonyLib;
 using Verse;
 
@@ -10,11 +10,9 @@ public static class Initializer {
 #if DEBUG
 		Harmony.DEBUG = true;
 #endif
-		// Initialize Harmony
 		var harmony = new Harmony(ThisAssembly.Project.PackageId);
-		// Reads all [HarmonyPatch] attributes in your assembly and applies them
 		harmony.PatchAll(Assembly.GetExecutingAssembly());
-		Settings.Default.Offsets.Apply(ThingStatOffsetCollection.ApplyMode.Overwrite);
+		Settings.Default.Apply();
 		Logger.Message("Initialized");
     }
 }

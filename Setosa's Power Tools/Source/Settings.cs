@@ -9,7 +9,7 @@ public class Settings : ModSettings {
 
 	private ThingStatOffsetCollection? _customOffsets;
 
-    public StatsPreset Preset {
+	public StatsPreset Preset {
 		get => _preset;
 		internal set => _preset = value;
 	}
@@ -29,5 +29,7 @@ public class Settings : ModSettings {
 		base.ExposeData();
 		Scribe_Values.Look(ref _preset, "preset");
 		Scribe_Deep.Look(ref _customOffsets, "customOffsets");
-    }
+	}
+
+	public void Apply() => Offsets.Apply();
 }

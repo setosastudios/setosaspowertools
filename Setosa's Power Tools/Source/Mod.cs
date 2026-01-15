@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using HarmonyLib;
 using UnityEngine;
 using Verse;
 
@@ -10,7 +8,7 @@ namespace Setosa;
 
 [StaticConstructorOnStartup]
 public class Mod : Verse.Mod {
-	private const float RowHeight = 30;
+	private const float _ROW_HEIGHT = 30;
 
 	private readonly ScrollView _scroll = new();
 
@@ -34,7 +32,7 @@ public class Mod : Verse.Mod {
 		var list = new Listing_Standard();
 		list.Begin(inRect);
 
-		var rect = list.GetRect(RowHeight);
+		var rect = list.GetRect(_ROW_HEIGHT);
 		Widgets.Label(rect.LeftHalf(), "Preset:");
 		if (Widgets.ButtonText(rect.RightHalf(), Settings.Default.Preset.ToString())) {
 			var options = Enum.GetValues(typeof(StatsPreset))
@@ -45,12 +43,12 @@ public class Mod : Verse.Mod {
 			Find.WindowStack.Add(new FloatMenu(options));
 		}
 
-		list.GapLine(RowHeight / 2);
+		list.GapLine(_ROW_HEIGHT / 2);
 
 		var groups = Settings.Default.Offsets.Select(t => (ThingStatOffset)t)
 			.GroupBy(t => t.ThingDef)
 			.ToDictionary(g => g.Key, g => g.ToList());
-		float height = (groups.Count + (Settings.Default.Preset == StatsPreset.Custom ? Settings.Default.Offsets.Count : groups.Count)) * RowHeight;
+		float height = (groups.Count + (Settings.Default.Preset == StatsPreset.Custom ? Settings.Default.Offsets.Count : groups.Count)) * _ROW_HEIGHT;
 
 		var rest = new Rect(inRect) { y = list.CurHeight, height = inRect.height - list.CurHeight };
 		var scrollList = _scroll.Begin(rest, height);
@@ -71,7 +69,7 @@ public class Mod : Verse.Mod {
 					else
 						Logger.Warning($"Stat {tuple.StatDef} not found", true);
 				}
-				Widgets.Label(scrollList.GetRect(RowHeight), string.Join(", ", texts));
+				Widgets.Label(scrollList.GetRect(_ROW_HEIGHT), string.Join(", ", texts));
 			}
 			else {
 				foreach (var tuple in offsets) {
@@ -80,7 +78,7 @@ public class Mod : Verse.Mod {
 						Logger.Warning($"Stat {tuple.StatDef} not found", true);
 						continue;
 					}
-					var cols = scrollList.GetRect(RowHeight).FlexBox(["250", "50", "1fr"]);
+					var cols = scrollList.GetRect(_ROW_HEIGHT).FlexBox(["250", "50", "1fr"]);
 					Widgets.Label(cols[0], $"{stat.LabelCap}:");
 					Widgets.Label(cols[1], FormatValue(tuple.Value, percent: stat.defName != "MoveSpeed"));
 					if (Settings.Default.Preset == StatsPreset.Custom) {
@@ -112,6 +110,6 @@ public class Mod : Verse.Mod {
 
 	public override void WriteSettings() {
 		base.WriteSettings();
-		Settings.Default.Offsets.Apply(ThingStatOffsetCollection.ApplyMode.Overwrite);
+		Settings.Default.Apply();
 	}
 }

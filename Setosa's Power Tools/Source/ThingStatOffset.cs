@@ -118,14 +118,12 @@ public class ThingStatOffsetCollection : Base, IExposable {
 		var updates = this.Where(filter)
 			.Select(tuple => (tuple.Item1, tuple.Item2, selector(tuple.Item3)))
 			.ToList();
-		foreach (var (thingDef, statDef, value) in updates)
+		foreach ((string? thingDef, string? statDef, float value) in updates)
 			this[thingDef, statDef] = value;
 		return this;
 	}
 
-
-	public void Apply(ApplyMode mode = ApplyMode.Set) 
-		=> Apply(t => t.equippedStatOffsets ??= [], mode);
+	public void Apply(ApplyMode mode = ApplyMode.Set) => Apply(t => t.equippedStatOffsets ??= [], mode);
 
 	public void Apply(Func<ThingDef, List<StatModifier>> listGetter, ApplyMode mode = ApplyMode.Set) {
 		foreach (var group in this.GroupBy(t => t.Item1)) {
@@ -135,7 +133,10 @@ public class ThingStatOffsetCollection : Base, IExposable {
 				continue;
 			}
 			var statList = listGetter(thing);
-			var modifiers = group.Select(t => (StatModifier)(ThingStatOffset)t).ToArray();
+			var modifiers = group
+				.Select(t => (StatModifier)(ThingStatOffset)t)
+				.Where(sm => sm.stat is not null)
+				.ToArray();
 			if (mode == ApplyMode.Overwrite)
 				statList.Clear();
 			else if (mode == ApplyMode.Set) {

@@ -25,7 +25,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 	<PropertyGroup>
 		<CustomTaskDir>$(SolutionDir)DevOps\Task\</CustomTaskDir>
 		<DistDir>$(MSBuildProjectDirectory)\Dist\</DistDir>
-		<GameDir>G:\Game Files\Steam\steamapps\common\RimWorld\</GameDir>
+		<GameDir>$(SolutionDir)RimWorld\</GameDir>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -123,15 +123,19 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 	</Target>
 
 	<Target Name="PrepareLaunch" AfterTargets="Merge">
+		<!-- 1. Generate ModsConfig.xml -->
 		<ItemGroup>
 			<ModsConfigToken Include="PackageId" Value="$(PackageId)" />
 		</ItemGroup>
 		<BuildXml
 			Template="$(ProjectDir)Template\ModsConfig.xml"
-			Destination="$(SolutionDir)SaveData\Config\ModsConfig.xml"
+			Destination="$(TargetDir)ModsConfig.xml"
 			Tokens="@(ModsConfigToken)"
 		/>
+		<!-- 2. Generate Launch Script -->
 		<ItemGroup>
+			<LaunchCmd Include="@echo off" />
+			<LaunchCmd Include="copy /Y &quot;$(TargetDir)ModsConfig.xml&quot; &quot;$(SolutionDir)SaveData\Config\ModsConfig.xml&quot;" />
 			<LaunchCmd Include="start &quot;RimWorld Mod Test&quot; &quot;$(GameDir)RimWorldWin64.exe&quot; -popupwindow &quot;-savedatafolder=$(SolutionDir)SaveData&quot;" />
 		</ItemGroup>
 		<WriteLinesToFile
@@ -144,7 +148,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 	<Target Name="DeployAndLink" AfterTargets="Distribute">
 		<CreateLink
 			Source="$(DistDir)"
-			Destination="$(GameDir)\Mods\$(AssemblyName)"
+			Destination="$(GameDir)Mods\$(AssemblyName)"
 			Condition="Exists('$(GameDir)Mods')"
 		/>
 	</Target>
@@ -154,8 +158,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 			<DirsToDelete Include="$(DistDir)" />
 			<DirsToDelete Include="$(GameDir)\Mods\$(AssemblyName)" />
 			<FilesToDelete Include="$(SolutionDir)SaveData\Config\ModsConfig.xml" />
-			<FilesToDelete Include="$(TargetDir)LaunchRimWorld.bat" />
 			<FilesToDelete Include="$(TargetDir)Bundle.dll" />
+			<FilesToDelete Include="$(TargetDir)ModsConfig.xml" />
+			<FilesToDelete Include="$(TargetDir)LaunchRimWorld.bat" />
 		</ItemGroup>
 		<RemoveDir Directories="@(DirsToDelete)" />
 		<Delete Files="@(FilesToDelete)" />

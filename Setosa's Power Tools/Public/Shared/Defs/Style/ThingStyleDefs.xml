@@ -58,6 +58,22 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
   </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedPowerScrubberOrange</defName>
+    <overrideLabel>power scrubber</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubberOrange</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedSurgicalDrillOrange</defName>
+    <overrideLabel>surgical drill</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrillOrange</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
 
   <!-- Yellow -->
   <ThingStyleDef>
@@ -113,6 +129,22 @@
     <overrideLabel>nail gun</overrideLabel>
     <graphicData>
       <texPath>Things/Weapons/advancedNailGunYellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedPowerScrubberYellow</defName>
+    <overrideLabel>power scrubber</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubberYellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedSurgicalDrillYellow</defName>
+    <overrideLabel>surgical drill</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrillYellow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
   </ThingStyleDef>
@@ -174,6 +206,22 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
   </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedPowerScrubberRed</defName>
+    <overrideLabel>power scrubber</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubberRed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedSurgicalDrillRed</defName>
+    <overrideLabel>surgical drill</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrillRed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
 
   <!-- Blue -->
   <ThingStyleDef>
@@ -229,6 +277,22 @@
     <overrideLabel>nail gun</overrideLabel>
     <graphicData>
       <texPath>Things/Weapons/advancedNailGunBlue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedPowerScrubberBlue</defName>
+    <overrideLabel>power scrubber</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubberBlue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedSurgicalDrillBlue</defName>
+    <overrideLabel>surgical drill</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrillBlue</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
   </ThingStyleDef>
@@ -288,6 +352,22 @@
     <overrideLabel>nail gun</overrideLabel>
     <graphicData>
       <texPath>Things/Weapons/advancedNailGunGreen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedPowerScrubberGreen</defName>
+    <overrideLabel>power scrubber</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubberGreen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingStyleDef>
+  <ThingStyleDef>
+    <defName>advancedSurgicalDrillGreen</defName>
+    <overrideLabel>surgical drill</overrideLabel>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrillGreen</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
   </ThingStyleDef>

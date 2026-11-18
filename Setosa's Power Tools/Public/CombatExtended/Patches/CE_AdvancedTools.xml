@@ -228,4 +228,79 @@
       </tools>
     </value>
   </Operation>
+
+  <!-- ==================== Power Scrubber ==================== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_PowerScrubber"]/statBases</xpath>
+    <value>
+      <Bulk>3</Bulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_PowerScrubber"]/weaponTags</xpath>
+    <value>
+      <li>CE_OneHandedWeapon</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_PowerScrubber"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>brush head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>2</power>
+          <cooldownTime>1.5</cooldownTime>
+          <armorPenetrationBlunt>0</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <!-- ==================== Surgical Drill ==================== -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_SurgicalDrill"]/statBases</xpath>
+    <value>
+      <Bulk>3</Bulk>
+      <MeleeCounterParryBonus>0.10</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_SurgicalDrill"]/weaponTags</xpath>
+    <value>
+      <li>CE_OneHandedWeapon</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AdvancedTool_SurgicalDrill"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>bit</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>4</power>
+          <cooldownTime>1.1</cooldownTime>
+          <armorPenetrationSharp>6.0</armorPenetrationSharp>
+          <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>body</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>3</power>
+          <cooldownTime>1.0</cooldownTime>
+          <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
 </Patch>

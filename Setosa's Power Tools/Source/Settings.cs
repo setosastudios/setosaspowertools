@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Setosa.PowerTools;
@@ -29,6 +31,14 @@ public class Settings : ModSettings {
 		base.ExposeData();
 		Scribe_Values.Look(ref _preset, "preset");
 		Scribe_Deep.Look(ref _customOffsets, "customOffsets");
+		if (Scribe.mode == LoadSaveMode.LoadingVars && _customOffsets is not null) {
+			// Older settings contain no entries for tools introduced after they were saved.
+			var savedTools = new HashSet<string>(_customOffsets.Select(offset => offset.Item1));
+			foreach (var offset in Presets.Normal) {
+				if (!savedTools.Contains(offset.Item1))
+					_customOffsets.Add(offset);
+			}
+		}
 	}
 
 	public void Apply() => Offsets.Apply();

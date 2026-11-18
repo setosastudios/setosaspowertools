@@ -45,6 +45,15 @@ public static class Presets {
 				("ButcheryMechanoidSpeed", 0.8f)
 			]
 		}, {
+			"AdvancedTool_PowerScrubber",
+			[("CleaningSpeed", 0.8f)]
+		}, {
+			"AdvancedTool_SurgicalDrill",
+			[
+				("MedicalOperationSpeed", 0.4f),
+				("MedicalSurgerySuccessChance", 0.1f)
+			]
+		}, {
 			"AdvancedTool_NailGun",
 			[("ConstructionSpeed", 0.4f)]
 		}

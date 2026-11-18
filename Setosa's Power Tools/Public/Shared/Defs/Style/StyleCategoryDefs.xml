@@ -34,6 +34,14 @@
         <thingDef>AdvancedTool_NailGun</thingDef>
         <styleDef>advancedNailGunOrange</styleDef>
       </li>
+      <li>
+        <thingDef>AdvancedTool_PowerScrubber</thingDef>
+        <styleDef>advancedPowerScrubberOrange</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_SurgicalDrill</thingDef>
+        <styleDef>advancedSurgicalDrillOrange</styleDef>
+      </li>
     </thingDefStyles>
   </StyleCategoryDef>
 
@@ -69,6 +77,14 @@
       <li>
         <thingDef>AdvancedTool_NailGun</thingDef>
         <styleDef>advancedNailGunYellow</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_PowerScrubber</thingDef>
+        <styleDef>advancedPowerScrubberYellow</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_SurgicalDrill</thingDef>
+        <styleDef>advancedSurgicalDrillYellow</styleDef>
       </li>
     </thingDefStyles>
   </StyleCategoryDef>
@@ -106,6 +122,14 @@
         <thingDef>AdvancedTool_NailGun</thingDef>
         <styleDef>advancedNailGunRed</styleDef>
       </li>
+      <li>
+        <thingDef>AdvancedTool_PowerScrubber</thingDef>
+        <styleDef>advancedPowerScrubberRed</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_SurgicalDrill</thingDef>
+        <styleDef>advancedSurgicalDrillRed</styleDef>
+      </li>
     </thingDefStyles>
   </StyleCategoryDef>
 
@@ -142,6 +166,14 @@
         <thingDef>AdvancedTool_NailGun</thingDef>
         <styleDef>advancedNailGunBlue</styleDef>
       </li>
+      <li>
+        <thingDef>AdvancedTool_PowerScrubber</thingDef>
+        <styleDef>advancedPowerScrubberBlue</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_SurgicalDrill</thingDef>
+        <styleDef>advancedSurgicalDrillBlue</styleDef>
+      </li>
     </thingDefStyles>
   </StyleCategoryDef>
 
@@ -177,6 +209,14 @@
       <li>
         <thingDef>AdvancedTool_NailGun</thingDef>
         <styleDef>advancedNailGunGreen</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_PowerScrubber</thingDef>
+        <styleDef>advancedPowerScrubberGreen</styleDef>
+      </li>
+      <li>
+        <thingDef>AdvancedTool_SurgicalDrill</thingDef>
+        <styleDef>advancedSurgicalDrillGreen</styleDef>
       </li>
     </thingDefStyles>
   </StyleCategoryDef>

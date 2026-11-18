@@ -292,4 +292,77 @@
     </weaponTags>
   </ThingDef>
 
+  <ThingDef ParentName="AdvancedToolBase">
+    <defName>AdvancedTool_PowerScrubber</defName>
+    <label>power scrubber</label>
+    <description>A handheld scrubber with a rotating brush that lifts dirt and dried blood from floors. Its soft brush head makes a poor weapon.</description>
+    <graphicData>
+      <texPath>Things/Weapons/advancedPowerScrubber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>10000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>35</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <tools>
+      <li>
+        <label>brush head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0</armorPenetration>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>AdvancedTool</li>
+    </weaponTags>
+  </ThingDef>
+
+  <ThingDef ParentName="AdvancedToolBase">
+    <defName>AdvancedTool_SurgicalDrill</defName>
+    <label>surgical drill</label>
+    <description>A compact surgical drill with a fine bit and a steady grip. It helps a surgeon work faster and more precisely during operations.</description>
+    <graphicData>
+      <texPath>Things/Weapons/advancedSurgicalDrill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>1.5</Mass>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <equippedAngleOffset>-45</equippedAngleOffset>
+    <costList>
+      <Steel>45</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <tools>
+      <li>
+        <label>bit</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.1</cooldownTime>
+        <armorPenetration>0.20</armorPenetration>
+      </li>
+      <li>
+        <label>body</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>1.0</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>AdvancedTool</li>
+    </weaponTags>
+  </ThingDef>
+
 </Defs>

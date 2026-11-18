@@ -41,7 +41,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" GeneratePathProperty="true" />
 		<PackageReference Include="Lib.Harmony" Version="2.4.2" />
 		<PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="5.0.0">
 			<PrivateAssets>all</PrivateAssets>
@@ -55,7 +55,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2440250887
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="TrueMogician.Extensions.Collections" Version="0.7.1" />
+
 	</ItemGroup>
 
 	<UsingTask TaskName="ProcessTranslations" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">

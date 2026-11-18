@@ -1,15 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using TrueMogician.Exceptions;
-using TrueMogician.Extensions.Collections.Dictionary;
-using TrueMogician.Extensions.Enumerable;
 using Verse;
 
 namespace Setosa.PowerTools;
 
-using Base = TupleDictionary3D<string, string, float>;
 using Tuple = (string ThingDef, string StatDef, float Value);
 
 public enum StatsPreset : byte {
@@ -35,9 +32,9 @@ public class ThingStatOffset : IExposable {
 		_value = value;
 	}
 
-	public string ThingDef => _thingDef ?? throw new NotFoundException($"{nameof(ThingDef)} not found");
+	public string ThingDef => _thingDef ?? throw new InvalidOperationException($"{nameof(ThingDef)} not found");
 
-	public string StatDef => _statDef ?? throw new NotFoundException($"{nameof(StatDef)} not found");
+	public string StatDef => _statDef ?? throw new InvalidOperationException($"{nameof(StatDef)} not found");
 
 	public float Value => _value;
 
@@ -78,19 +75,42 @@ public class ThingStatOffset : IExposable {
 		=> new() { stat = offset.Stat, value = offset.Value };
 }
 
-public class ThingStatOffsetCollection : Base, IExposable {
+public class ThingStatOffsetCollection : IEnumerable<Tuple>, IExposable {
 	public enum ApplyMode : byte {
 		Set,
 		Append,
 		Overwrite
 	}
 
+	private readonly Dictionary<(string ThingDef, string StatDef), float> _values = new();
+
+	public int Count => _values.Count;
+
+	public float this[string thingDef, string statDef] {
+		get => _values[(thingDef, statDef)];
+		set => _values[(thingDef, statDef)] = value;
+	}
+
 	public ThingStatOffsetCollection() { }
 
-	public ThingStatOffsetCollection(IEnumerable<Tuple> collection)
-		=> collection.ForEach(Add);
+	public ThingStatOffsetCollection(IEnumerable<Tuple> collection) {
+		foreach (var offset in collection)
+			Add(offset);
+	}
 
-	public ThingStatOffsetCollection(IDictionary3D<string, string, float> dictionary) : base(dictionary) { }
+	public void Add(Tuple offset) => Add(offset.ThingDef, offset.StatDef, offset.Value);
+
+	public void Add(string thingDef, string statDef, float value) => _values.Add((thingDef, statDef), value);
+
+	public bool TryGetValue(string thingDef, string statDef, out float value)
+		=> _values.TryGetValue((thingDef, statDef), out value);
+
+	public bool Remove(string thingDef, string statDef) => _values.Remove((thingDef, statDef));
+
+	public IEnumerator<Tuple> GetEnumerator()
+		=> _values.Select(entry => (entry.Key.ThingDef, entry.Key.StatDef, entry.Value)).GetEnumerator();
+
+	IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
 	public void Add(string thingDef, List<(string StatDef, float Value)> offsets)
 		=> offsets.ForEach(t => Add(thingDef, t.StatDef, t.Value));
@@ -99,7 +119,7 @@ public class ThingStatOffsetCollection : Base, IExposable {
 		var tuples = Scribe.mode == LoadSaveMode.Saving ? ((IEnumerable<Tuple>)this).Select(t => (ThingStatOffset)t).ToList() : [];
 		Scribe_Collections.Look(ref tuples, "entries", LookMode.Deep);
 		if (Scribe.mode == LoadSaveMode.LoadingVars) {
-			Clear();
+			_values.Clear();
 			foreach (var tuple in tuples) {
 				if (!tuple.Valid) { // Possible invalid data from save file
 					Logger.Warning("Invalid stat offset");

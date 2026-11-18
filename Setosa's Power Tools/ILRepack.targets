@@ -12,7 +12,7 @@
 			Parallel="true"
 			DebugInfo="true"
 			Internalize="true"
-			LibraryPath="$(TargetDir);$(GameDir)RimWorldWin64_Data\Managed"
+			LibraryPath="$(TargetDir);$(PkgKrafs_Rimworld_Ref)\ref\net472"
 			InputAssemblies="@(InputAssemblies)"
 			TargetKind="Dll"
 			OutputFile="$(TargetDir)Bundle.dll"

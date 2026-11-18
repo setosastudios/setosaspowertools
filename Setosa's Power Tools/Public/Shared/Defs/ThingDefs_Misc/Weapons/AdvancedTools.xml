@@ -338,8 +338,8 @@
     </statBases>
     <equippedAngleOffset>-45</equippedAngleOffset>
     <costList>
-      <Steel>45</Steel>
-      <ComponentIndustrial>6</ComponentIndustrial>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <tools>
       <li>

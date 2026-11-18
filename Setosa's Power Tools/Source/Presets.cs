@@ -50,8 +50,8 @@ public static class Presets {
 		}, {
 			"AdvancedTool_SurgicalDrill",
 			[
-				("MedicalOperationSpeed", 0.4f),
-				("MedicalSurgerySuccessChance", 0.1f)
+				("MedicalOperationSpeed", 0.6f),
+				("MedicalSurgerySuccessChance", 0.2f)
 			]
 		}, {
 			"AdvancedTool_NailGun",
